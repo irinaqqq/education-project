@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load embed_video_tags %}
+
+
+{% block content %}
+{% for i in vid %}
+
+
+<div class="container ">
+        
+    <div class="card-columns" align ="center" style="padding: 10px; margin: 20px;">
+        <div class="card" align ="center" style="width: max-content; border:5px black solid">
+            {% video i.video 'small' %}
+            <div class="card-body">
+                <h5 class="card-title">{{i.title}}</h5>
+    
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+{% endfor %}
+
+{% endblock %}

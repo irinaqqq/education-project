@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+ 
+<div class="container ">
+        
+    <div class="card-columns" align ="center" style="padding: 10px; margin: 20px;">
+        <div class="card" align ="center" style="width: max-content; border:5px black solid">
+            <img class="card-img-top" src="https://i.pinimg.com/originals/06/b9/89/06b98975d02aadc816fd9d9d1c6e7929.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Upaı: {{score}}</h5>
+ 
+                <p class="card-text">Paıyz: {{percent}}%</p>
+                <p class="card-text">Jumsalǵan ýaqyt: {{time}} se</p>
+                <p class="card-text">Durys jaýaptar: {{correct}}</p>
+                <p class="card-text">Qate jaýaptar: {{wrong}}</p>
+                <p class="card-text">Suraqtardyń barlyǵy: {{total}}</p>
+                <h5>Sáttilik!</h5>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+ 
+{% endblock %}

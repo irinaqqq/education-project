@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+{% if titles %}
+  {% for el in titles %}
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ el.title }}</h3>
+      </div>
+      <div class="panel-body">
+        <a class="nav-link " href="{% url 'themes' el.title %}">Takiriptar</a>
+        <a class="nav-link " href="{% url 'tasks' el.title %}">Esepter shygaru</a>
+        <a class="nav-link " href="{% url 'videoles' el.title %}">Video Sabaktar</a>
+    </div>
+  </div>
+  {% endfor %}
+{% else %}
+<div class="panel panel-danger">
+    <div class="panel-heading">
+      <h3 class="panel-title">Пока что нету тем</h3>
+    </div>
+  </div>
+{% endif %}
+{% endblock content %}
